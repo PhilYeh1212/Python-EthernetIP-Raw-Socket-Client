@@ -1,3 +1,9 @@
+> **🔥 BLACK FRIDAY SALE:** Get **15% OFF** all source codes with code `BLACKFRIDAY`. [**Click here to apply discount automatically**](https://pokhts.gumroad.com/l/senior-engineer-toolkit?offer_code=BLACKFRIDAY)
+
+
+
+
+
 # 🏭 Ethernet/IP Raw Packet Debugger & Mock PLC (Python)
 
 [![Python](https://img.shields.io/badge/Python-3.x-blue.svg)](https://www.python.org/)

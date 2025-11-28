@@ -57,7 +57,7 @@ The repository here provides a preview of the architecture.
 
 To get the Complete Source Code (including the GUI implementation, threading logic, and the robust Mock PLC server), you can download the full study kit.
 
-👉 Download the Full Kit on Gumroad ($29):[Link](https://pokhts.gumroad.com/l/ethernet-ip-study-kit)
+👉 Download the Full Kit on Gumroad ($9.9):[Link](https://pokhts.gumroad.com/l/ethernet-ip-study-kit)
 
 (Includes: client_gui.py, mock_plc_server.py, and a detailed Protocol Guide)
 

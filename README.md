@@ -42,10 +42,10 @@ this kit existed back then.
 This repo contains the **Community Edition** — a basic CIP client and a
 simple mock server. Free for learning.
 
-The **[EtherNet/IP Study Kit Pro](https://pokhts.gumroad.com)** version on
+The **[EtherNet/IP Study Kit Pro](https://philyeh.gumroad.com)** version on
 Gumroad adds the educational features that make this an actual textbook:
 
-| Feature | Community (this repo) | **[Pro Edition ($29)](https://pokhts.gumroad.com)** |
+| Feature | Community (this repo) | **[Pro Edition ($29)](https://philyeh.gumroad.com)** |
 |---|:---:|:---:|
 | Register Session + Forward Open + UDP I/O | ✅ | ✅ |
 | Forward Close (clean teardown) | ⚠️ Basic | ✅ |
@@ -61,9 +61,9 @@ Gumroad adds the educational features that make this an actual textbook:
 | **Dark industrial UI theme** | ❌ | ✅ |
 | **Commercial license** | ❌ | ✅ |
 
-### 👉 [Get EtherNet/IP Study Kit Pro on Gumroad — $29](https://pokhts.gumroad.com)
+### 👉 [Get EtherNet/IP Study Kit Pro on Gumroad — $29](https://philyeh.gumroad.com)
 
-Or save $47 with the **[Industrial Python Toolkit Bundle](https://pokhts.gumroad.com)**
+Or save $47 with the **[Industrial Python Toolkit Bundle](https://philyeh.gumroad.com)**
 ($129) — includes EtherNet/IP + Modbus + MQTT + J1939.
 
 ---
@@ -120,19 +120,19 @@ packet, so you can literally watch the protocol work in real time.
 ## 📥 Get the Pro version
 
 The Community Edition gets you started. The
-**[Pro version](https://pokhts.gumroad.com)** is the actual learning kit —
+**[Pro version](https://philyeh.gumroad.com)** is the actual learning kit —
 byte-by-byte teaching, real CIP parser, step-by-step mode, and the cheat
 sheet. The cheap way to actually *understand* EtherNet/IP.
 
 | Product | Price | Link |
 |---|---:|---|
-| 🏭 **EtherNet/IP Study Kit** (this tool, Pro edition) | $29 | [Buy](https://pokhts.gumroad.com) |
-| 🚛 **J1939 Sniffer Pro** | $59 | [Buy](https://pokhts.gumroad.com) |
-| ⚙️ **Modbus Logger Pro** | $49 | [Buy](https://pokhts.gumroad.com) |
-| 📡 **MQTT Logger Pro** | $39 | [Buy](https://pokhts.gumroad.com) |
-| 🔒 **Private ChatGPT Stack** | $59 | [Buy](https://pokhts.gumroad.com) |
-| 📦 **Industrial Python Toolkit Bundle** (4 tools, save $47) | **$129** | [Buy](https://pokhts.gumroad.com) |
-| 📊 **CSV Dashboard** (free companion tool) | $0 | [Download](https://pokhts.gumroad.com) |
+| 🏭 **EtherNet/IP Study Kit** (this tool, Pro edition) | $29 | [Buy](https://philyeh.gumroad.com) |
+| 🚛 **J1939 Sniffer Pro** | $59 | [Buy](https://philyeh.gumroad.com) |
+| ⚙️ **Modbus Logger Pro** | $49 | [Buy](https://philyeh.gumroad.com) |
+| 📡 **MQTT Logger Pro** | $39 | [Buy](https://philyeh.gumroad.com) |
+| 🔒 **Private ChatGPT Stack** | $59 | [Buy](https://philyeh.gumroad.com) |
+| 📦 **Industrial Python Toolkit Bundle** (4 tools, save $47) | **$129** | [Buy](https://philyeh.gumroad.com) |
+| 📊 **CSV Dashboard** (free companion tool) | $0 | [Download](https://philyeh.gumroad.com) |
 
 ---
 
@@ -141,7 +141,7 @@ sheet. The cheap way to actually *understand* EtherNet/IP.
 **Phil Yeh** — Senior Automation Engineer based in Taiwan. I build Python
 tools for industrial protocol work.
 
-- 🛒 **Store:** [pokhts.gumroad.com](https://pokhts.gumroad.com)
+- 🛒 **Store:** [philyeh.gumroad.com](https://philyeh.gumroad.com)
 - ✍️ **Blog:** [dev.to/philyeh](https://dev.to/philyeh)
 
 ---
@@ -150,7 +150,7 @@ tools for industrial protocol work.
 
 The Community Edition in this repository is free for personal and
 educational use. For commercial use (client projects, internal company
-tools, products you sell), please get the **[Pro Edition](https://pokhts.gumroad.com)**
+tools, products you sell), please get the **[Pro Edition](https://philyeh.gumroad.com)**
 which includes a proper commercial license.
 
 If this tool helped you, **a ⭐ on the repo** means a lot to an indie

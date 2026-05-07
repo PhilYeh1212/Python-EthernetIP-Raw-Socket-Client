@@ -15,149 +15,82 @@ EtherNet/IP Study Kit screenshot
 <img width="1280" height="720" alt="eip_cover" src="https://github.com/user-attachments/assets/042b882b-5b0e-42c2-8d20-47e640261b2d" />
 
 
----
+# EtherNet/IP Study Kit
 
-## 🎯 Why this exists
+> Learn the CIP (Common Industrial Protocol) byte-by-byte with an interactive packet inspector and a mock PLC server. The fastest way to actually understand EtherNet/IP from the wire up.
 
-EtherNet/IP and CIP are powerful — but the official ODVA specs cost $400
-and most online tutorials hand you a hex string and say "send this", which
-teaches you nothing about *why* it works.
-
-This kit does the opposite:
-
-- **Every byte is labeled**: `65 00` is "Cmd 0x65 (Register Session)"
-- **Every field has a tooltip** explaining what it does
-- **The Mock PLC actually parses your packets** (it's not a dumb echo
-  server — it identifies CIP services and replies with proper CPF format)
-- **Step-by-step mode**: Register → Forward Open → I/O → Close, one
-  click at a time, with full packet inspection
-
-Built by an automation engineer who learned CIP the hard way and wished
-this kit existed back then.
+**This is a commercial educational tool, sold on Gumroad.** Source code is included in your purchase.
 
 ---
 
-## 📂 Open Source vs Pro
+## What it does
 
-This repo contains the **Community Edition** — a basic CIP client and a
-simple mock server. Free for learning.
+- **Annotated packet view** — every CIP frame broken down by section, with tooltips explaining each byte
+- **Mock PLC server** — talks real EtherNet/IP without needing an Allen-Bradley CompactLogix on your desk
+- **Raw socket client** — see Class 3 explicit messaging at the TCP level
+- **CIP service browser** — Get_Attribute_Single, Set_Attribute_Single, Read_Tag, Write_Tag
+- **Implicit messaging primer** — see how I/O scanning actually works (UDP Class 1)
+- **Side-by-side hex view** — bytes on one side, decoded fields on the other
+- **Single-file Python** — runs on Windows, macOS, Linux
 
-The **[EtherNet/IP Study Kit Pro](https://philyeh.gumroad.com)** version on
-Gumroad adds the educational features that make this an actual textbook:
+## Why this exists
 
-| Feature | Community (this repo) | **[Pro Edition ($29)](https://philyeh.gumroad.com)** |
-|---|:---:|:---:|
-| Register Session + Forward Open + UDP I/O | ✅ | ✅ |
-| Forward Close (clean teardown) | ⚠️ Basic | ✅ |
-| **Byte-by-byte annotated packet view** | ❌ | ✅ |
-| **Hover tooltips** on every field | ❌ | ✅ |
-| **Step-by-step interactive mode** | ❌ | ✅ |
-| **Mock PLC actually parses incoming CIP** | ⚠️ Echo only | ✅ Full parser |
-| **Annotated server console output** (color-coded) | ❌ | ✅ |
-| **CIP Cheat Sheet** (PDF/MD reference) | ❌ | ✅ |
-| **Constants for every CIP service** (no magic hex) | ❌ | ✅ |
-| **Auto-incrementing sequence numbers** | ❌ | ✅ |
-| **Free-Run mode** for sustained I/O testing | ❌ | ✅ |
-| **Dark industrial UI theme** | ❌ | ✅ |
-| **Commercial license** | ❌ | ✅ |
+EtherNet/IP is one of the most widely deployed industrial protocols, but learning resources are terrible. ODVA's spec costs $1,200. Books are out of print. Vendor docs assume you already know CIP. Most engineers learn by reverse-engineering Wireshark captures.
 
-### 👉 [Get EtherNet/IP Study Kit Pro on Gumroad — $29](https://philyeh.gumroad.com)
+This tool flips that — you can see every CIP service request as it's built, byte by byte, with annotations explaining what each field does. It's how I wish I'd learned EtherNet/IP.
 
-Or save $47 with the **[Industrial Python Toolkit Bundle](https://philyeh.gumroad.com)**
-($129) — includes EtherNet/IP + Modbus + MQTT + J1939.
+## Who this is for
 
----
+| Audience | Why it fits |
+|---|---|
+| Junior controls engineers | Understand the protocol before you debug live PLCs |
+| Embedded engineers | Implement EtherNet/IP slaves correctly |
+| Security researchers | Analyze CIP traffic for vulnerabilities |
+| Students | Learn industrial networking without a lab budget |
+| EtherNet/IP scanner developers | See real frame structures for testing |
 
-## 🚀 Quick Start (Community Edition)
+## What's covered
 
-You need **two terminals**.
+- Connection management (forward open, forward close)
+- Class 3 explicit messaging (TCP)
+- Class 1 implicit I/O (UDP) — basics
+- CIP path encoding (logical, symbolic)
+- Common services: Get/Set Attribute, Read/Write Tag, Reset
+- Object model basics (identity, message router, connection manager)
 
-### Terminal 1 — start the mock PLC
+## What's NOT covered (yet)
 
-```bash
-git clone https://github.com/PhilYeh1212/Python-EthernetIP-Raw-Socket-Client
-cd Python-EthernetIP-Raw-Socket-Client
-python mock_plc_server.py
-```
+- ODVA conformance test details
+- Advanced safety profiles (CIP Safety)
+- Motion profiles (CIP Motion)
+- Sync-over-EtherNet/IP
 
-### Terminal 2 — launch the client
+## Get it
 
-```bash
-python client_gui.py
-```
+→ **[EtherNet/IP Study Kit on Gumroad — $29](https://philyeh.gumroad.com/l/ethernetip-study-kit)**
 
-In the GUI, set Target IP to `127.0.0.1` and click ▶ Start. The client
-will perform Register Session → Forward Open → UDP I/O → Forward Close
-in a loop, while the mock PLC logs everything in Terminal 1.
+Or grab the **[Industrial Toolkit Bundle](https://philyeh.gumroad.com/l/industrial-toolkit-bundle)** ($129) — EtherNet/IP + J1939 + Modbus + MQTT.
 
-**No external dependencies — pure Python standard library.**
+## What's in the purchase
 
----
+- `eip_study_kit.py` — Annotated packet inspector + mock PLC server
+- `eip_client_examples.py` — Working CIP client examples
+- `requirements.txt` — Pinned dependencies
+- `README.md` — Setup + study guide
+- Commercial use license per Gumroad EULA
 
-## 🔧 What you'll learn
+## License
 
-After working through this kit you will understand:
+Commercial use license per Gumroad EULA. You may use this software at the company that purchased it for any commercial purpose. Redistribution, resale, or open-sourcing the code is not permitted.
 
-- **Why EtherNet/IP needs both TCP and UDP** (TCP for connection mgmt, UDP for I/O)
-- **The 24-byte encapsulation header** that every CIP packet starts with
-- **Forward Open** — what's actually being negotiated
-- **O2T and T2O Connection IDs** — the most misunderstood part of CIP
-- **The Common Packet Format (CPF)** that wraps every CIP message
-- **Why sequence numbers matter** in Class 1 implicit messaging
+## Support
 
-The Pro version takes this further with byte-level annotation on every
-packet, so you can literally watch the protocol work in real time.
+- Reply to your Gumroad purchase email
+- Questions about CIP / EtherNet/IP via [GitHub Issues](https://github.com/PhilYeh1212/Python-EthernetIP-Raw-Socket-Client/issues)
 
 ---
 
-## 📚 Related reading
+I write about industrial Python and protocol internals at **[dev.to/philyeh](https://dev.to/philyeh)**, and post Chinese versions on [iThelp](https://ithelp.ithome.com.tw/users/20171204).
 
-- [**The Architecture of Implicit Messaging: Implementing Raw CIP I/O in Python**](https://dev.to/philyeh/the-architecture-of-implicit-messaging-implementing-raw-cip-io-in-python-1o0c)
-  — my Dev.to article explaining CIP implicit messaging in depth
+— Phil Yeh · Senior Automation Engineer · Industrial Python · Developer Tools
 
----
-
-## 📥 Get the Pro version
-
-The Community Edition gets you started. The
-**[Pro version](https://philyeh.gumroad.com)** is the actual learning kit —
-byte-by-byte teaching, real CIP parser, step-by-step mode, and the cheat
-sheet. The cheap way to actually *understand* EtherNet/IP.
-
-| Product | Price | Link |
-|---|---:|---|
-| 🏭 **EtherNet/IP Study Kit** (this tool, Pro edition) | $29 | [Buy](https://philyeh.gumroad.com) |
-| 🚛 **J1939 Sniffer Pro** | $59 | [Buy](https://philyeh.gumroad.com) |
-| ⚙️ **Modbus Logger Pro** | $49 | [Buy](https://philyeh.gumroad.com) |
-| 📡 **MQTT Logger Pro** | $39 | [Buy](https://philyeh.gumroad.com) |
-| 🔒 **Private ChatGPT Stack** | $59 | [Buy](https://philyeh.gumroad.com) |
-| 📦 **Industrial Python Toolkit Bundle** (4 tools, save $47) | **$129** | [Buy](https://philyeh.gumroad.com) |
-| 📊 **CSV Dashboard** (free companion tool) | $0 | [Download](https://philyeh.gumroad.com) |
-
----
-
-## 📫 About
-
-**Phil Yeh** — Senior Automation Engineer based in Taiwan. I build Python
-tools for industrial protocol work.
-
-- 🛒 **Store:** [philyeh.gumroad.com](https://philyeh.gumroad.com)
-- ✍️ **Blog:** [dev.to/philyeh](https://dev.to/philyeh)
-
----
-
-## 📝 License
-
-The Community Edition in this repository is free for personal and
-educational use. For commercial use (client projects, internal company
-tools, products you sell), please get the **[Pro Edition](https://philyeh.gumroad.com)**
-which includes a proper commercial license.
-
-If this tool helped you, **a ⭐ on the repo** means a lot to an indie
-developer. Thanks!
-
----
-
-<sub>**Keywords:** Python, EtherNet/IP, CIP, ODVA, Allen-Bradley,
-Rockwell, Omron, CompactLogix, ControlLogix, Implicit Messaging,
-Forward Open, encapsulation, raw socket, industrial protocol, study kit</sub>
